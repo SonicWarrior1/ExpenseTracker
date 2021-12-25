@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#1C264A"
+    android:background="#DDB9EEF3"
     tools:context=".MainActivity">
 
     <ImageView
@@ -23,8 +23,12 @@
         android:layout_width="285dp"
         android:layout_height="102dp"
         android:gravity="center"
-        android:text="Expense Tracker"
-        android:textColor="#F8F8F8"
+        android:shadowColor="#2B2929"
+        android:shadowDx="10"
+        android:shadowDy="10"
+        android:shadowRadius="7"
+        android:text="@string/expense_tracker"
+        android:textColor="#000000"
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

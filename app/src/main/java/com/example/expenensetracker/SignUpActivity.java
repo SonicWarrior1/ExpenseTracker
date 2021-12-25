@@ -2,10 +2,12 @@ package com.example.expenensetracker;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class SignUpActivity extends AppCompatActivity {
 
@@ -15,14 +17,15 @@ public class SignUpActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_sign_up);
+
         name=findViewById(R.id.name);
         phone=findViewById(R.id.phoneNumber);
         email=findViewById(R.id.email);
         pass=findViewById(R.id.password);
         alert=findViewById(R.id.alert);
         dbHandler=new DbHandler(SignUpActivity.this);
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sign_up);
     }
 
     public void signUp(View view){
@@ -37,10 +40,14 @@ public class SignUpActivity extends AppCompatActivity {
         }
 
         dbHandler.addNewUser(name1,phone1,email1,pass1);
-        alert.setText("Sign Up Successful");
         name.setText("");
         phone.setText("");
         email.setText("");
         pass.setText("");
+
+        Intent i=new Intent(SignUpActivity.this,LoginActivity.class);
+        startActivity(i);
+        finish();
+        Toast.makeText(getApplicationContext(),"Sign Up Successful",Toast.LENGTH_LONG).show();
     }
 }

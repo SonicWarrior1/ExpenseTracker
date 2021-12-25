@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#2A386C"
+    android:background="#DDB9EEF3"
     tools:context=".SecondActivity" >
 
     <Button
@@ -24,16 +24,20 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="252dp"
-        android:layout_height="84dp"
-        android:layout_marginBottom="432dp"
+        android:layout_width="275dp"
+        android:layout_height="102dp"
+        android:layout_marginBottom="412dp"
+        android:fontFamily="@font/roboto_medium"
         android:gravity="center"
-        android:text="Expense Tracker"
-        android:textColor="#F8F8F8"
+        android:shadowColor="#2B2929"
+        android:shadowDx="10"
+        android:shadowDy="10"
+        android:shadowRadius="6"
+        android:text="@string/expense_tracker"
+        android:textColor="#000000"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
         app:layout_constraintVertical_bias="0.0"

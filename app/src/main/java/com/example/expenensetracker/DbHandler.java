@@ -2,6 +2,7 @@ package com.example.expenensetracker;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
@@ -42,6 +43,21 @@ public class DbHandler extends SQLiteOpenHelper {
 
         db.insert(TABLE_NAME,null,values);
         db.close();
+    }
+
+
+    public String getPassword(String user){
+        String pass="";
+        String query="SELECT PASSWORD_COL FROM " + TABLE_NAME + " WHERE EMAIL_COL=" + user;
+        SQLiteDatabase db=this.getReadableDatabase();
+        Cursor c=db.rawQuery(query,null);
+        if(c.moveToFirst()){
+            do{
+                pass=c.getString(0);
+            }while(c.moveToNext());
+        }
+        c.close();
+        return pass;
     }
     @Override
     public void onUpgrade(SQLiteDatabase db, int i, int i1) {

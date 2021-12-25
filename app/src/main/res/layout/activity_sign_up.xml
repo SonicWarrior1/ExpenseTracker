@@ -11,15 +11,16 @@
         android:id="@+id/imageView3"
         android:layout_width="154dp"
         android:layout_height="141dp"
+        android:background="#6D000000"
         android:contentDescription="TODO"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/ic_baseline_monetization_on_24"
 
+        app:layout_constraintVertical_bias="0.027"
+        app:srcCompat="@drawable/ic_baseline_monetization_on_24"
         tools:ignore="ContentDescription" />
 
     <TextView
@@ -28,8 +29,12 @@
         android:layout_height="84dp"
         android:layout_marginBottom="424dp"
         android:gravity="center"
+        android:shadowColor="#323030"
+        android:shadowDx="15"
+        android:shadowDy="-3"
+        android:shadowRadius="5"
         android:text="Expense Tracker"
-        android:textColor="#F8F8F8"
+        android:textColor="#000000"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -85,7 +90,7 @@
                 android:layout_height="48dp"
                 android:gravity="center"
                 android:text="Name:"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="24sp" />
 
             <EditText
@@ -93,7 +98,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="textPersonName" />
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                android:textColor="#FFFFFF"
+                tools:ignore="SpeakableTextPresentCheck" />
 
         </TableRow>
 
@@ -107,7 +115,7 @@
                 android:layout_height="48dp"
                 android:gravity="center"
                 android:text="Phone:"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="24sp" />
 
             <EditText
@@ -115,7 +123,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="number" />
+                android:inputType="number"
+                android:minHeight="48dp"
+                android:textColor="#FFFFFF"
+                tools:ignore="SpeakableTextPresentCheck" />
 
         </TableRow>
 
@@ -130,7 +141,7 @@
                 android:layout_height="41dp"
                 android:gravity="center"
                 android:text="Email:"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="24sp" />
 
             <EditText
@@ -153,7 +164,7 @@
                 android:layout_height="48dp"
                 android:gravity="center"
                 android:text="Password:"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="24sp" />
 
             <EditText
@@ -163,7 +174,8 @@
                 android:ems="10"
                 android:inputType="textPassword"
                 android:minHeight="48dp"
-                android:textColor="#FFFFFF" />
+                android:textColor="#FFFFFF"
+                tools:ignore="SpeakableTextPresentCheck" />
         </TableRow>
 
     </TableLayout>
@@ -177,8 +189,9 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/imageView4"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.597"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView1"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
